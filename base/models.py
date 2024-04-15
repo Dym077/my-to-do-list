@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
+# All models for the project are being born, nurtured and encouraged here.
 
 class Goal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)

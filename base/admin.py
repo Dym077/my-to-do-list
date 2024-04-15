@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Goal
-# Register your models here.
+# The models are registered here.
 
 
 admin.site.register(Goal)

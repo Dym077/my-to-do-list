@@ -1,0 +1,8 @@
+<h3>Goal Form</h3>
+<!--This is the form where the user can add and describe goals-->
+<a href="{% url 'goals' %}">Go back</a>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
