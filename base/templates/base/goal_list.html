@@ -1,1 +1,14 @@
 <h1>My Goals</h1>
+
+<table>
+    <tr>
+        <th>To do</th>
+    </tr>
+    {% for goal in goals %}
+    <tr>
+        <td>{{goal.title}}</td>
+    </tr>
+    {% empty %}
+    <h3>No goals in list</h3>
+    {% endfor %}
+</table>
