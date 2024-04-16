@@ -49,6 +49,14 @@
 
 ## Features
 
+### CRUD Implementation
+- This app makes use of the CRUD operations (Create, Read, Update & Delete).
+For example, when a user is adding a new goal or task, the app is creating this item.
+The user is then able to view this item, which is making use of the "read"-operation
+If a user has to update a goal or task, the selected item can be edited in the form and submitted again,
+which makes use of the "update"-operation. Finally, if a user wants to delete a goal or task, clicking the Delete- button 
+will make use of the "delete"-operation and the item will be erased accordingly. 
+
 ## Testing
 
 ### PEP8 Testing

@@ -6,11 +6,14 @@
     <tr>
         <th>To do</th>
         <th></th>
+        <th></th>
     </tr>
     {% for goal in goals %}
     <tr>
         <td>{{goal.title}}</td>
         <td><a href="{% url 'goal' goal.id %}">View</a></td>
+        <td><a href="{% url 'goal-update' goal.id %}">Edit</a></td>
+        <td><a href="{% url 'goal-delete' goal.id %}">Delete</a></td>
     </tr>
     {% empty %}
     <h3>No goals in list</h3>

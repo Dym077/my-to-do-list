@@ -1,0 +1,8 @@
+<!--This lets the user confirm that the selected goal is going to be deleted-->
+
+<a href="{% url 'goals' %}">Go Back</a>
+<form method="POST">
+    {% csrf_token %}
+    <p>Do You want to delete this goal? "{{goal}}"</p>
+    <input type="submit" value="Delete"/>
+</form>

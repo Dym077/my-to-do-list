@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from .models import Goal
@@ -20,4 +20,14 @@ class GoalsDetail(DetailView):
 class GoalCreate(CreateView):
     model = Goal
     fields = '__all__'
+    success_url = reverse_lazy('goals')
+
+class GoalUpdate(UpdateView):
+    model = Goal
+    fields = '__all__'
+    success_url = reverse_lazy('goals')
+
+class DeleteView(DeleteView):
+    model = Goal    
+    context_object_name = 'goal'
     success_url = reverse_lazy('goals')
