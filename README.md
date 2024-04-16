@@ -22,7 +22,8 @@
 
 ## Features
 ### Authentication
-* 
+* A new user will be prompted to create a user name and a password. As soon as that is done, the user will be able to log on to the site and start using the features. A returning user will already have created a user name and can log in with those credentials. The user will also be able to change the password if necessary. 
+
 ### Goals
 ### Tasks
 ### Calendar
