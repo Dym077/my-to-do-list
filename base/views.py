@@ -6,6 +6,8 @@ from django.urls import reverse_lazy
 
 from django.contrib.auth.views import LoginView
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from .models import Goal
 
 
@@ -20,26 +22,26 @@ class UserLoginView(LoginView):
         return reverse_lazy('goals')
 
 
-class GoalsList(ListView):
+class GoalsList(LoginRequiredMixin, ListView):
     model = Goal
     context_object_name = 'goals'
 
-class GoalsDetail(DetailView):
+class GoalsDetail(LoginRequiredMixin, DetailView):
     model = Goal
     context_object_name = 'goal'
     template_name = 'base/goal.html'
 
-class GoalCreate(CreateView):
+class GoalCreate(LoginRequiredMixin, CreateView):
     model = Goal
     fields = '__all__'
     success_url = reverse_lazy('goals')
 
-class GoalUpdate(UpdateView):
+class GoalUpdate(LoginRequiredMixin, UpdateView):
     model = Goal
     fields = '__all__'
     success_url = reverse_lazy('goals')
 
-class DeleteView(DeleteView):
+class DeleteView(LoginRequiredMixin, DeleteView):
     model = Goal    
     context_object_name = 'goal'
     success_url = reverse_lazy('goals')
