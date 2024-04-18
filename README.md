@@ -7,6 +7,9 @@
 
 ## Why a To-do-list app?
 
+- The idea behind this project was that I wanted to design an app that makes life easier to manage for everyone.
+By setting goals, assigning smaller tasks to them and prioritising them according to importance, the user will be able to structure life's chores and tidy up everyday stuff.
+
 ### 
 
 ### 
